@@ -1,0 +1,29 @@
+{
+  "name": "turbocoolstack",
+  "author": "klaudiusz.w.m@gmail.com",
+  "version": "1.0.0",
+  "private": true,
+  "license": "MIT",
+  "workspaces": [
+    "apps/*",
+    "packages/*"
+  ],
+  "scripts": {
+    "build": "turbo run build",
+    "dev": "turbo run dev",
+    "lint": "turbo run lint",
+    "format": "prettier --write \"**/*.{ts,tsx,md,js,jsx}\""
+  },
+  "devDependencies": {
+    "@goatee/prettier": "^0.0.4",
+    "eslint": "^8.4.1",
+    "prettier": "latest",
+    "tsconfig": "*",
+    "turbo": "latest"
+  },
+  "engines": {
+    "node": ">=14.0.0"
+  },
+  "dependencies": {},
+  "packageManager": "yarn@1.22.19"
+}

@@ -1,0 +1,27 @@
+{
+  "$schema": "https://turbo.build/schema.json",
+  "globalDependencies": ["**/.env.*local"],
+  "pipeline": {
+    "lint": {
+      "outputs": []
+    },
+    "dev": {
+      "cache": false
+    },
+    "ui#build": {
+      "cache": false
+    },
+    "electronrenderer#build": {
+      "cache": false,
+      "dependsOn": ["^ui#build"]
+    },
+    "electronmain#build": {
+      "cache": false,
+      "dependsOn": ["^electronrenderer#build"]
+    },
+    "build": {
+      "cache": false,
+      "dependsOn": ["^electronmain#build"]
+    }
+  }
+}
