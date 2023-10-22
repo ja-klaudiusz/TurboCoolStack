@@ -7,10 +7,10 @@
 </h1>
 
 <h2 align="center" style="border-bottom:0px">
-  Multi-Platform App Development Kick-Start
+  Multi-Platform App Development Kick-Start powered by Turborepo
 </h2>
 
-**TurboCoolStack** 🚀 provides a solid starting point for building applications across different platforms, integrating Electron, React, and Tailwind CSS for a streamlined development process. This setup is engineered for those looking to efficiently develop desktop, and in the near future, web and mobile applications with a consistent quality and streamlined workflow.
+**TurboCoolStack** 🚀 provides a solid starting point for building applications across different platforms, integrating Turborepo, Electron, React, and Tailwind CSS for a streamlined development process. This setup is engineered for those looking to efficiently develop desktop, and in the near future, web and mobile applications with a consistent quality and streamlined workflow.
 
 ## 📁 Workspaces Overview
 
