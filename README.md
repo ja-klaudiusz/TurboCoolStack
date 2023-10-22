@@ -2,7 +2,13 @@
   <img src="./packages/ui/public/logo.png" alt="TurboCoolStack Logo" width="200" />
 </p>
 
-# TurboCoolStack: Multi-Platform App Development Kick-Start 🚀
+<h1 align="center" style="background: -webkit-linear-gradient(left, #ec1e5c, #2200a6, #8100c2); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">
+  TurboCoolStack 🚀
+</h1>
+
+<h2 align="center">
+  Multi-Platform App Development Kick-Start
+</h2>
 
 **TurboCoolStack** 🚀 provides a solid starting point for building applications across different platforms, integrating Electron, React, and Tailwind CSS for a streamlined development process. This setup is engineered for those looking to efficiently develop desktop, and in the near future, web and mobile applications with a consistent quality and streamlined workflow.
 
