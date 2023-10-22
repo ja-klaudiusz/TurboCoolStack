@@ -1,4 +1,6 @@
-![TurboCoolStack Logo](./packages/ui/public/logo.png){ width="200" style="display: block; margin: 0 auto" }
+<p align="center">
+  <img src="./packages/ui/public/logo.png" alt="TurboCoolStack Logo" width="200" />
+</p>
 
 # TurboCoolStack: Multi-Platform App Development Kick-Start 🚀
 
