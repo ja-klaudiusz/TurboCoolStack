@@ -2,11 +2,11 @@
   <img src="./packages/ui/public/logo.png" alt="TurboCoolStack Logo" width="200" />
 </p>
 
-<h1 align="center" style="background: -webkit-linear-gradient(left, #ec1e5c, #2200a6, #8100c2); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">
+<h1 align="center" style="border-bottom:0px">
   TurboCoolStack 🚀
 </h1>
 
-<h2 align="center">
+<h2 align="center" style="border-bottom:0px">
   Multi-Platform App Development Kick-Start
 </h2>
 
