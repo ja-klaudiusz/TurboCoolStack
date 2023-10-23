@@ -3,7 +3,7 @@
 </p>
 
 <h1 align="center" style="border-bottom:0px">
-  TurboCoolStack 🚀⚛
+  TurboCoolStack 🚀 ⚛
 </h1>
  
 ## ⚛ Multi-Platform 📱💻 App Development Kick-Start 🚀
