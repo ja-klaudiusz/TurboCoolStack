@@ -5,12 +5,12 @@
 <h1 align="center" style="border-bottom:0px">
   TurboCoolStack 🚀
 </h1>
+ 
+## Multi-Platform App Development Kick-Start 🚀
 
-<h2 align="center" style="border-bottom:0px">
-  Multi-Platform App Development Kick-Start powered by Turborepo
-</h2>
+**TurboCoolStack** 🚀 provides a solid starting point within the Turborepo for building applications across different platforms, integrating Electron, React (CRA, Next.js), React Native (Expo - IOS, Android), and Tailwind CSS for a streamlined development process. This setup is engineered for those looking to efficiently develop desktop, web, and mobile applications with consistent quality and a streamlined workflow.
 
-**TurboCoolStack** 🚀 provides a solid starting point for building applications across different platforms, integrating Turborepo, Electron, React (CRA, Next.js), React Native (Expo) and Tailwind CSS for a streamlined development process. This setup is engineered for those looking to efficiently develop desktop, web and mobile applications with a consistent quality and streamlined workflow.
+**Important**: One of the central features of **TurboCoolStack** is that almost all the applications leverage a common source of React components located in **packages/ui**. This structure promotes uniformity and efficiency in development. Additionally, all workspaces share a common Tailwind CSS configuration, ensuring a consistent design system across all platforms.
 
 ## 📁 Workspaces Overview
 
@@ -20,7 +20,7 @@
 - **app/electronBuilder**: Oversees the application packaging stage with Electron Builder, It's tasked with compiling and assembling the final desktop application.
 - **app/native**: A React Native app based on Expo with Nativewind CSS.
 - **app/web**: A web app grounded on Next.js with Tailwind CSS.
-- **packages/ui**: This workspace serves as a central repository for UI components, styled with Tailwind CSS.
+- **packages/ui**: This workspace serves as a central repository for UI React components, styled with Tailwind CSS.
 
 ## 🔧 Setup & Installation
 
@@ -37,6 +37,16 @@ With the dependencies in place, you can dive into development:
 - Run `yarn build` in the root directory when you're ready to compile a production-ready package of your application.
 
 > ℹ️ A basic understanding of React, TurboRepo, Next.js, Expo and Electron will enhance your development experience.
+
+## Development Mode Overview
+
+In development mode, various components of the application initialize automatically.
+
+- **app/electronRenderer**: This part will automatically launch within an Electron window. Additionally, for easier access, it is available through your web browser at port 3001.
+- **app/electronMain**: This is the designated area for configuring your Electron desktop application. It's integral to define the behavior of the app's main process here. From window creation to custom functionalities, this part is pivotal for the desktop app's performance and feature set. Make sure to configure settings tailored to your project's needs.
+- **app/docs**: This workspace will automatically start in a browser window, becoming accessible at port 3002.
+- **app/web**: Differing from the others, this Next.js application doesn't start automatically in the browser. It requires you to manually navigate to [http://localhost:3000/](http://localhost:3000/).
+- **app/native**: One of the easiest way is to utilize the Expo Go app on your mobile device. While in development mode, ensure you are logged into the same free Expo account on both your desktop and mobile device. This synchronization will automatically display links in the Expo Go app, directing you to your current project.
 
 ## 📚 Resources
 
