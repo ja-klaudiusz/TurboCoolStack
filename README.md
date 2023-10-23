@@ -10,13 +10,16 @@
   Multi-Platform App Development Kick-Start powered by Turborepo
 </h2>
 
-**TurboCoolStack** 🚀 provides a solid starting point for building applications across different platforms, integrating Turborepo, Electron, React, and Tailwind CSS for a streamlined development process. This setup is engineered for those looking to efficiently develop desktop, and in the near future, web and mobile applications with a consistent quality and streamlined workflow.
+**TurboCoolStack** 🚀 provides a solid starting point for building applications across different platforms, integrating Turborepo, Electron, React (CRA, Next.js), React Native (Expo) and Tailwind CSS for a streamlined development process. This setup is engineered for those looking to efficiently develop desktop, web and mobile applications with a consistent quality and streamlined workflow.
 
 ## 📁 Workspaces Overview
 
+- **app/docs**: A web app based on Create React App with Tailwind CSS.
 - **app/electronRenderer**: Utilizes Create React App with Tailwind CSS, for the Electron renderer process and desktop app UI development.
 - **app/electronMain**: Handles Electron's main process, managed by Webpack, responsible for core OS-level interactions.
 - **app/electronBuilder**: Oversees the application packaging stage with Electron Builder, It's tasked with compiling and assembling the final desktop application.
+- **app/native**: A React Native app based on Expo with Nativewind CSS.
+- **app/web**: A web app grounded on Next.js with Tailwind CSS.
 - **packages/ui**: This workspace serves as a central repository for UI components, styled with Tailwind CSS.
 
 ## 🔧 Setup & Installation
@@ -33,19 +36,18 @@ With the dependencies in place, you can dive into development:
 - Run `yarn dev` in the root directory to launch the project in development mode, complete with hot reloading for real-time updates.
 - Run `yarn build` in the root directory when you're ready to compile a production-ready package of your application.
 
-> ℹ️ A basic understanding of React, TurboRepo, and Electron will enhance your development experience.
-
-## 🌟 On the Horizon
-
-The roadmap for TurboCoolStack includes integrating a Next.js framework and expanding into the mobile development scene with Expo, both with Tailwind CSS. This upgrade will make TurboCoolStack an all-encompassing toolkit for modern app development across various platforms.
+> ℹ️ A basic understanding of React, TurboRepo, Next.js, Expo and Electron will enhance your development experience.
 
 ## 📚 Resources
 
 To get the most out of TurboCoolStack, you might find it helpful to familiarize yourself with the documentation of the technologies used. Here are the quick links to the official documentation:
 
 - **TurboRepo**: [Official Documentation](https://turbo.build/repo/docs)
+- **Next.js**: [Official Documentation](https://nextjs.org/docs)
 - **Tailwind CSS**: [Official Documentation](https://tailwindcss.com/docs)
 - **Electron**: [Official Documentation](https://www.electronjs.org/docs)
+- **React Native**: [Official Documentation](https://reactnative.dev/docs/getting-started)
+- **Expo**: [Official Documentation](https://docs.expo.dev)
 
 ## 📄 License
 
@@ -65,4 +67,4 @@ Thank you for being part of this journey!
 
 ---
 
-[![Star on GitHub](https://img.shields.io/github/stars/your-github-username/your-repo-name.svg?style=social)](https://github.com/ja-klaudiusz/TurboCoolStack/stargazers)
+[![Star on GitHub](https://img.shields.io/github/stars/ja-klaudiusz/TurboCoolStack.svg?style=social)](https://github.com/ja-klaudiusz/TurboCoolStack/stargazers)
