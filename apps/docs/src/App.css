@@ -1,0 +1,23 @@
+.App {
+  text-align: center;
+}
+
+.Turbo {
+  font-size: 50px;
+  background: linear-gradient(to right, #0099f7, #ec1e5c, #ec1e5c);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  line-height: 1;
+  font-weight: bolder;
+}
+
+.CoolStack {
+  font-size: 76px;
+  background: linear-gradient(to right, #ec1e5c, #2200a6, #8100c2);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  line-height: 1;
+  font-weight: bolder;
+}
