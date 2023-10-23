@@ -1,4 +1,4 @@
-import "./globals.css";
+import "ui/src/styles.css";
 
 import type { Metadata } from "next";
 

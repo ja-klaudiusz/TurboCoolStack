@@ -2,4 +2,5 @@
 import "./styles.css";
 
 // components
-export * from "./LogoImage"; 
+export * from "./LogoImage";
+export * from "./AppInfo"

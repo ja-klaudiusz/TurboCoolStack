@@ -59,6 +59,19 @@ To get the most out of TurboCoolStack, you might find it helpful to familiarize 
 - **React Native**: [Official Documentation](https://reactnative.dev/docs/getting-started)
 - **Expo**: [Official Documentation](https://docs.expo.dev)
 
+## 📝 To-Do List
+
+There are ongoing improvements and features in the pipeline to enhance the versatility and efficiency of **TurboCoolStack**. Here are some tasks on the roadmap:
+
+1. **Shared Static Files Between Workspaces**: 🗂️
+
+   - Currently, to use a single image across multiple workspaces, it's necessary to duplicate the file into each workspace's `public` folder. I'am aiming to solve the problem for static files to prevent redundancy and improve resource management. Let me know if you know how to handle it 💪.
+
+2. **Creation of `packages/ui-native` Workspace**: 📱
+   - The goal is to set up a new workspace named `packages/ui-native` and configure Nativewind within it. This enhancement will allow the `app/native` workspace to share components with `packages/ui-native`, streamlining the development process across native platforms.
+
+Completing these tasks will contribute significantly to making **TurboCoolStack** even more efficient and developer-friendly. Any contributions or suggestions for these to-dos are welcome! 🚀
+
 ## 📄 License
 
 This project is licensed under the terms of the [MIT license](https://opensource.org/licenses/MIT) and is available for free.
