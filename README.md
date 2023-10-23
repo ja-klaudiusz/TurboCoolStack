@@ -6,7 +6,7 @@
   TurboCoolStack 🚀⚛
 </h1>
  
-## 📱💻⚛ Multi-Platform App Development Kick-Start 🚀
+## ⚛ Multi-Platform 📱💻 App Development Kick-Start 🚀
 
 **TurboCoolStack** 🚀 provides a solid starting point within the Turborepo for building applications across different platforms, integrating Electron, React (CRA, Next.js), React Native (Expo - IOS, Android), and Tailwind CSS for a streamlined development process. This setup is engineered for those looking to efficiently develop desktop, web, and mobile applications with consistent quality and a streamlined workflow.
 
