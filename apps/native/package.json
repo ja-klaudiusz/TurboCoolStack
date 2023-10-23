@@ -1,0 +1,36 @@
+{
+  "name": "native",
+  "version": "1.0.0",
+  "main": "index.tsx",
+  "scripts": {
+    "start": "expo start",
+    "android": "expo start --android",
+    "ios": "expo start --ios",
+    "web": "expo start --web",
+    "eject": "expo eject",
+    "dev": "npm start"
+  },
+  "dependencies": {
+    "expo": "~49.0.15",
+    "expo-linear-gradient": "^12.5.0",
+    "expo-router": "^2.0.9",
+    "expo-status-bar": "~1.6.0",
+    "nativewind": "^2.0.11",
+    "react": "^18.2.0",
+    "react-native": "0.72.6"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.20.0",
+    "@babel/preset-env": "^7.23.2",
+    "@babel/runtime": "^7.23.2",
+    "@expo/config-plugins": "^7.2.5",
+    "@types/babel__core": "^7.20.3",
+    "@types/react": "^18.2.30",
+    "@types/webpack-env": "^1.18.3",
+    "babel-plugin-module-resolver": "^5.0.0",
+    "postcss": "^8.4.24",
+    "tailwindcss": "3.3.2",
+    "typescript": "^5.2.2"
+  },
+  "private": true
+}
