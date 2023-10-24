@@ -8,21 +8,32 @@
     "dev": {
       "cache": false
     },
-    "ui#build": {},
+    "ui#build": {
+      "cache": false
+    },
     "docs#build": {
+      "cache": false,
       "dependsOn": ["^ui#build"]
     },
     "web#build": {
+      "cache": false,
       "dependsOn": ["^ui#build"]
     },
     "electronrenderer#build": {
+      "cache": false,
       "dependsOn": ["^ui#build"]
     },
     "electronmain#build": {
-      "dependsOn": ["^electronrenderer#build"]
+      "cache": false,
+      "dependsOn": ["^ui#build", "^electronrenderer#build"]
     },
     "electronbuilder#build": {
-      "dependsOn": ["^electronmain#build"]
+      "cache": false,
+      "dependsOn": [
+        "^ui#build",
+        "^electronrenderer#build",
+        "^electronmain#build"
+      ]
     },
     "build": {
       "outputs": [
