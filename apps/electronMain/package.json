@@ -6,7 +6,8 @@
   "scripts": {
     "dev": "yarn build && electron .",
     "build": "webpack --config  webpack.config.js",
-    "copy-resources": "cp -R src/resources/ dist/resources/"
+    "copy-resources": "cp -R src/resources/ dist/resources/",
+    "clean": "rm -rf dist"
   },
   "devDependencies": {
     "copy-webpack-plugin": "^11.0.0",

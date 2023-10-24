@@ -8,20 +8,34 @@
     "dev": {
       "cache": false
     },
-    "ui#build": {
-      "cache": false
+    "ui#build": {},
+    "docs#build": {
+      "dependsOn": ["^ui#build"]
+    },
+    "web#build": {
+      "dependsOn": ["^ui#build"]
     },
     "electronrenderer#build": {
-      "cache": false,
       "dependsOn": ["^ui#build"]
     },
     "electronmain#build": {
-      "cache": false,
       "dependsOn": ["^electronrenderer#build"]
     },
-    "build": {
-      "cache": false,
+    "electronbuilder#build": {
       "dependsOn": ["^electronmain#build"]
+    },
+    "build": {
+      "outputs": [
+        "dist/**",
+        "dist-main/**",
+        "dist-renderer/**",
+        "build/**",
+        ".next/**",
+        "!.next/cache/**"
+      ]
+    },
+    "clean": {
+      "cache": false
     }
   }
 }

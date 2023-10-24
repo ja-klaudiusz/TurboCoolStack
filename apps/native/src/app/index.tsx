@@ -32,7 +32,7 @@ export default function Page() {
           className="p-3 rounded-full" style={{ backgroundColor: 'transparent' }}>
           <Text className="text-4xl text-white" style={{ fontWeight: '900' }}>CoolStack</Text>
         </LinearGradient>
-        <Text className="text-2xl text-gray-300">Native App</Text>
+        <Text className="text-2xl text-gray-300">Native</Text>
       </View>
 
     </View>

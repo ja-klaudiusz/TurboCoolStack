@@ -10,8 +10,9 @@
     "copy-renderer": "cp -R ../electronRenderer/build dist-renderer",
     "copy": "yarn copy-main && yarn copy-renderer",
     "clear": "rm -rf dist",
-    "cleaning-up": "rm -rf dist-main && rm -rf dist-renderer && rm -rf ../electronMain/dist && rm -rf ../electronRenderer/build",
-    "build": "yarn copy && yarn clear && electron-builder && yarn cleaning-up"
+    "cleaning-up": "rm -rf dist-main && rm -rf dist-renderer",
+    "clean": "rm -rf dist && rm -rf dist-main && rm -rf dist-renderer",
+    "build": "yarn copy && electron-builder && yarn cleaning-up"
   },
   "build": {
     "productName": "TurboCoolStack",
