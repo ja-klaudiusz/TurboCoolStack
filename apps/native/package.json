@@ -11,7 +11,7 @@
     "dev": "npm start"
   },
   "dependencies": {
-    "expo": "~49.0.15",
+    "expo": "49.0.16",
     "expo-linear-gradient": "^12.5.0",
     "expo-router": "^2.0.9",
     "expo-status-bar": "~1.6.0",
