@@ -22,6 +22,16 @@
 - **app/web**: A web app grounded on Next.js with Tailwind CSS.
 - **packages/ui**: This workspace serves as a central repository for UI React components, styled with Tailwind CSS.
 
+## ⚙️ Prerequisites
+
+Before you proceed with the setup, ensure that your development environment meets the following requirements. This project was created with specific versions of Node and Yarn to avoid compatibility issues and leverage their latest features. Here are the versions you'll need:
+
+- **Node.js**: Version 18.
+
+- **Yarn**: Version 4.
+
+By using the same versions, you’re aligning with the project's original development environment, minimizing potential issues related to version discrepancies.
+
 ## 🔧 Setup & Installation
 
 1. Clone the repository.
@@ -88,7 +98,7 @@ Developing across different platforms and environments can sometimes lead to une
 
 `yarn workspace ui build`
 
-**Additional Context**: It's important to note that this issue tends to occur only at the beginning. After successfully building the workspace once, the `ui` refference should thereafter be available both during development mode and the build process. This quirk seems to be more of an environmental hiccup rather than a persistent problem, and it's observed less frequently on macOS.
+**Additional Context**: It's important to note that this issue tends to occur only at the beginning. After successfully building the workspace once, the `ui` reference should thereafter be available both during development mode and the build process. This quirk seems to be more of an environmental hiccup rather than a persistent problem, and it's observed less frequently on macOS. Additionally, it's worth mentioning that this issue has not been noted when using Node version 18 and Yarn version 4. Aligning with these versions could prevent this problem.
 
 ## 📄 License
 
