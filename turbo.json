@@ -9,42 +9,34 @@
       "cache": false
     },
     "ui#build": {
-      "cache": false
+      "cache": false,
+      "outputs": ["dist/**"]
     },
     "docs#build": {
       "cache": false,
-      "dependsOn": ["^ui#build"]
+      "dependsOn": ["^ui#build"],
+      "outputs": ["build/**"]
     },
     "web#build": {
       "cache": false,
-      "dependsOn": ["^ui#build"]
+      "dependsOn": ["^ui#build"],
+      "outputs": [".next/**", "!.next/cache/**"]
     },
     "electronrenderer#build": {
       "cache": false,
-      "dependsOn": ["^ui#build"]
+      "dependsOn": ["^ui#build"],
+      "outputs": ["build/**"]
     },
     "electronmain#build": {
       "cache": false,
-      "dependsOn": ["^ui#build", "^electronrenderer#build"]
+      "outputs": ["dist/**"]
     },
     "electronbuilder#build": {
       "cache": false,
-      "dependsOn": [
-        "^ui#build",
-        "^electronrenderer#build",
-        "^electronmain#build"
-      ]
+      "dependsOn": ["^electronrenderer#build", "^electronmain#build"],
+      "outputs": ["dist/**"]
     },
-    "build": {
-      "outputs": [
-        "dist/**",
-        "dist-main/**",
-        "dist-renderer/**",
-        "build/**",
-        ".next/**",
-        "!.next/cache/**"
-      ]
-    },
+    "build": {},
     "clean": {
       "cache": false
     }
