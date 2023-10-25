@@ -98,26 +98,29 @@ This problem often arises due to incompatibility between certain shell commands 
 
 1. Open the `package.json` file in the `apps/electronBuilder` workspace.
 2. Locate the scripts.
-3. Modify these commands to use their Windows equivalents. For instance, you might replace `cp` with a suitable command like `copy` or `xcopy`, and alter the syntax to match Windows command line requirements.
+3. Modify these commands to use their Windows equivalents. 
 4. Save your changes and rerun the build process.
 
 ```json
 // Example modification in package.json (adjusting for Windows compatibility)
 "scripts": {
-   // Original Unix command
-  "copy-main": "cp -R ../electronMain/dist dist-main",
-  "copy-renderer": "cp -R ../electronRenderer/build dist-renderer",
-  "clear": "rm -rf dist",
-  "cleaning-up": "rm -rf dist-main && rm -rf dist-renderer",
-  "clean": "rm -rf dist && rm -rf dist-main && rm -rf dist-renderer", 
-
   // Modified for Windows
   "copy-main": "xcopy ..\\electronMain\\dist dist-main\\ /E /I /H /Y", 
   "copy-renderer": "xcopy ..\\electronRenderer\\build dist-renderer\\ /E /I /H /Y", 
+  "copy": "yarn copy-main && yarn copy-renderer",
   "clear": "rimraf dist",
   "cleaning-up": "rimraf dist-main && rimraf dist-renderer", 
-  "clean": "rimraf dist && rimraf dist-main && rimraf dist-renderer" 
-  ...
+  "clean": "rimraf dist && rimraf dist-main && rimraf dist-renderer",
+  "build": "yarn copy && electron-builder && yarn cleaning-up",
+
+  // Original Unix commands
+  "copy-main": "cp -R ../electronMain/dist dist-main",
+  "copy-renderer": "cp -R ../electronRenderer/build dist-renderer",
+  "copy": "yarn copy-main && yarn copy-renderer",
+  "clear": "rm -rf dist",
+  "cleaning-up": "rm -rf dist-main && rm -rf dist-renderer",
+  "clean": "rm -rf dist && rm -rf dist-main && rm -rf dist-renderer",
+  "build": "yarn copy && electron-builder && yarn cleaning-up",
 }
 ```
 
