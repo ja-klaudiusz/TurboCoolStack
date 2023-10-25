@@ -104,10 +104,19 @@ This problem often arises due to incompatibility between certain shell commands 
 ```json
 // Example modification in package.json (adjusting for Windows compatibility)
 "scripts": {
-  "copy-main": "cp -R ../electronMain/dist dist-main",  // Original Unix command
-  "copy-main": "xcopy ..\\electronMain\\dist dist-main\\ /E /I /H /Y", // Modified for Windows
-  "copy-renderer": "cp -R ../electronRenderer/build dist-renderer",  // Original Unix command
-  "copy-renderer": "xcopy ..\\electronRenderer\\build dist-renderer\\ /E /I /H /Y", // Modified for Windows
+   // Original Unix command
+  "copy-main": "cp -R ../electronMain/dist dist-main",
+  "copy-renderer": "cp -R ../electronRenderer/build dist-renderer",
+  "clear": "rm -rf dist",
+  "cleaning-up": "rm -rf dist-main && rm -rf dist-renderer",
+  "clean": "rm -rf dist && rm -rf dist-main && rm -rf dist-renderer", 
+
+  // Modified for Windows
+  "copy-main": "xcopy ..\\electronMain\\dist dist-main\\ /E /I /H /Y", 
+  "copy-renderer": "xcopy ..\\electronRenderer\\build dist-renderer\\ /E /I /H /Y", 
+  "clear": "rimraf dist",
+  "cleaning-up": "rimraf dist-main && rimraf dist-renderer", 
+  "clean": "rimraf dist && rimraf dist-main && rimraf dist-renderer" 
   ...
 }
 ```
