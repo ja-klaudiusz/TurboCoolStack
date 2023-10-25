@@ -9,27 +9,29 @@
       "cache": false
     },
     "ui#build": {
-      "outputs": ["dist/**"],
-      "dependsOn": ["^web#build", "^docs#build", "^electronrenderer#build"]
+      "outputs": ["dist/**"]
     },
     "docs#build": {
+      "dependsOn": ["ui#build"],
       "outputs": ["build/**"]
     },
     "web#build": {
+      "dependsOn": ["ui#build"],
       "outputs": [".next/**", "!.next/cache/**"]
     },
     "electronrenderer#build": {
-      "outputs": ["build/**"],
-      "dependsOn": ["^electronbuilder#build"]
+      "dependsOn": ["ui#build"],
+      "outputs": ["build/**"]
     },
     "electronmain#build": {
-      "outputs": ["dist/**"],
-      "dependsOn": ["^electronbuilder#build"]
+      "outputs": ["dist/**"] 
     },
     "electronbuilder#build": {
+      "dependsOn": ["electronmain#build", "electronrenderer#build"],
       "outputs": ["dist/**"]
     },
-    "build": {},
+    "build": {
+    },
     "clean": {
       "cache": false
     }
