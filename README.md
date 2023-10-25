@@ -86,7 +86,33 @@ Completing these tasks will contribute significantly to making **TurboCoolStack*
 
 Developing across different platforms and environments can sometimes lead to unexpected issues. This section aims to address some of the common problems you might encounter when working with **TurboCoolStack**.
 
-### Issue: `ui` reference error
+### 🚨 Issue: Build Failure on Windows
+
+**Problem**: 
+Developers might experience a build process failure specifically on Windows systems during the file copying stage within the `apps/electronBuilder` workspace. The operation stops unexpectedly, indicating errors that are typically related to command-line instructions for copying files.
+
+**Likely Cause**: 
+This problem often arises due to incompatibility between certain shell commands used in scripts within `package.json` and the Windows command line interpreter. These script commands, are set up for Unix-based systems and do not execute as expected on Windows.
+
+**Quick Fix**:
+
+1. Open the `package.json` file in the `apps/electronBuilder` workspace.
+2. Locate the scripts.
+3. Modify these commands to use their Windows equivalents. For instance, you might replace `cp` with a suitable command like `copy` or `xcopy`, and alter the syntax to match Windows command line requirements.
+4. Save your changes and rerun the build process.
+
+```json
+// Example modification in package.json (adjusting for Windows compatibility)
+"scripts": {
+  "copy-main": "cp -R ../electronMain/dist dist-main",  // Original Unix command
+  "copy-main": "xcopy ..\\electronMain\\dist dist-main\\ /E /I /H /Y", // Modified for Windows
+  "copy-renderer": "cp -R ../electronRenderer/build dist-renderer",  // Original Unix command
+  "copy-renderer": "xcopy ..\\electronRenderer\\build dist-renderer\\ /E /I /H /Y", // Modified for Windows
+  ...
+}
+```
+
+### 🚨 Issue: `ui` reference error
 
 **Problem**: After the initial installation, you might encounter issues related to references the `ui` workspace, typically after running `yarn dev` or `yarn build`. This problem manifests as errors in resolving dependencies from the **packages/ui**.
 
