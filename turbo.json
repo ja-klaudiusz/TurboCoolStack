@@ -9,30 +9,24 @@
       "cache": false
     },
     "ui#build": {
-      "cache": false,
       "outputs": ["dist/**"]
     },
     "docs#build": {
-      "cache": false,
       "dependsOn": ["^ui#build"],
       "outputs": ["build/**"]
     },
     "web#build": {
-      "cache": false,
       "dependsOn": ["^ui#build"],
       "outputs": [".next/**", "!.next/cache/**"]
     },
     "electronrenderer#build": {
-      "cache": false,
       "dependsOn": ["^ui#build"],
       "outputs": ["build/**"]
     },
     "electronmain#build": {
-      "cache": false,
       "outputs": ["dist/**"]
     },
     "electronbuilder#build": {
-      "cache": false,
       "dependsOn": ["^electronrenderer#build", "^electronmain#build"],
       "outputs": ["dist/**"]
     },
