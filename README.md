@@ -124,20 +124,6 @@ This problem often arises due to incompatibility between certain shell commands 
 }
 ```
 
-### 🚨 Issue: `ui` reference error
-
-**Problem**: After the initial installation, you might encounter issues related to references the `ui` workspace, typically after running `yarn dev` or `yarn build`. This problem manifests as errors in resolving dependencies from the **packages/ui**.
-
-**Likely Cause**: This issue is particularly noticed on Windows systems and seems to stem from how the dependencies and workspaces are initially built and linked together.
-
-**Quick Fix**:
-
-1. If you run into this problem, a simple command can usually resolve these reference issues. In your terminal, at root of the project, execute the following command:
-
-`yarn workspace ui build`
-
-**Additional Context**: It's important to note that this issue tends to occur only at the beginning. After successfully building the workspace once, the `ui` reference should thereafter be available both during development mode and the build process. This quirk seems to be more of an environmental hiccup rather than a persistent problem, and it's observed less frequently on macOS. Additionally, it's worth mentioning that this issue has not been noted when using Node version 18 and Yarn version 4. Aligning with these versions could prevent this problem.
-
 ## 📄 License
 
 This project is licensed under the terms of the [MIT license](https://opensource.org/licenses/MIT) and is available for free.
