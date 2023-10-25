@@ -9,25 +9,24 @@
       "cache": false
     },
     "ui#build": {
-      "outputs": ["dist/**"]
+      "outputs": ["dist/**"],
+      "dependsOn": ["^web#build", "^docs#build", "^electronrenderer#build"]
     },
     "docs#build": {
-      "dependsOn": ["^ui#build"],
       "outputs": ["build/**"]
     },
     "web#build": {
-      "dependsOn": ["^ui#build"],
       "outputs": [".next/**", "!.next/cache/**"]
     },
     "electronrenderer#build": {
-      "dependsOn": ["^ui#build"],
-      "outputs": ["build/**"]
+      "outputs": ["build/**"],
+      "dependsOn": ["^electronbuilder#build"]
     },
     "electronmain#build": {
-      "outputs": ["dist/**"]
+      "outputs": ["dist/**"],
+      "dependsOn": ["^electronbuilder#build"]
     },
     "electronbuilder#build": {
-      "dependsOn": ["^electronrenderer#build", "^electronmain#build"],
       "outputs": ["dist/**"]
     },
     "build": {},
