@@ -89,7 +89,7 @@ Developing across different platforms and environments can sometimes lead to une
 ### 🚨 Issue: Build Failure on Windows
 
 **Problem**: 
-Developers might experience a build process failure specifically on Windows systems during the file copying stage within the `apps/electronBuilder` workspace. The operation stops unexpectedly, indicating errors that are typically related to command-line instructions for copying files.
+Developers might experience a build process failure specifically on Windows systems during the file copying stage within the `apps/electronBuilder` workspace. The operation stops unexpectedly, indicating errors that are typically related to command-line instructions for copying and removing files.
 
 **Likely Cause**: 
 This problem often arises due to incompatibility between certain shell commands used in scripts within `package.json` and the Windows command line interpreter. These script commands, are set up for Unix-based systems and do not execute as expected on Windows.
