@@ -20,6 +20,6 @@
     "webpack-node-externals": "^3.0.0"
   },
   "dependencies": {
-    "electron-is-dev": "2.0.0" 
+    "electron-is-dev": "2.0.0"
   }
 }

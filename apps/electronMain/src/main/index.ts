@@ -5,10 +5,10 @@ import isDev from 'electron-is-dev'
 app.whenReady().then(() => {
   const win = new BrowserWindow({
     title: 'Main window',
-    width: 1200,
-    height: 1080,
-    minWidth: 960,
-    minHeight: 960,
+    width: 1000,
+    height: 860,
+    minWidth: 700,
+    minHeight: 700,
     autoHideMenuBar: true,
     webPreferences: {
       nodeIntegration: true,
